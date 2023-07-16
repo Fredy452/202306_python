@@ -11,30 +11,33 @@ class User:
     def hacer_deposito(self, monto: str):
         """Metodo para hacer deposito"""
         self.balance_cuenta += monto
+        return self
 
     def hacer_retiro(self, monto: int):
         """Metodo hacer retiro"""
         self.balance_cuenta -= monto
+        return self
     
     def mostrar_balance_usuario(self):
         """Metodo para imprimir datos del usuario"""
         print(f"{self.nombre} {self.correo} {self.balance_cuenta} \n")
+        return self
     
     def transfer_dinero(self, other_user, monto: int):
         """Metodo para hacer transferencia de dinero"""
         self.balance_cuenta -= monto
         other_user.balance_cuenta += monto
+        return self
         
 
 user2 = User("Jose", "correo@correo.com")
-user2.hacer_deposito(100)
-user2.mostrar_balance_usuario()
+
+user2.hacer_deposito(100).hacer_deposito(200).mostrar_balance_usuario()
 
 
 #Usuario 3
 user3 = User("Carlos", "correo@gmail.com")
-user3.hacer_deposito(100)
-user3.mostrar_balance_usuario()
+user3.hacer_deposito(100).hacer_deposito(400).mostrar_balance_usuario()
 
 
 #Transfiriendo dinero
