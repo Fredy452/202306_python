@@ -8,7 +8,7 @@ class User:
         """Metodo constructor"""
         self.nombre = nombre
         self.correo = correo
-        self.cuenta = CuentaBancaria(tasa_interes = 2, balance = 0)
+        self.cuenta = CuentaBancaria(tasa_interes=2, balance=0)
 
     def hacer_deposito(self, monto: str):
         """Metodo para hacer deposito"""
