@@ -6,7 +6,7 @@ class Pirate:
         self.speed = 3
         self.health = 100
 
-    def show_stats( self ):
+    def show_stats(self):
         separator = "-"*40
         print(f"{separator}\nDatos del pirata\n"
               f"Name: {self.name}\n"
